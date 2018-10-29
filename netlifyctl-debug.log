@@ -1,0 +1,19 @@
+[37mDEBU[0m[29 Oct 18 20:29 +0000] PreRun                                        [37marguments[0m=[] [37mcommand[0m=login
+[37mDEBU[0m[29 Oct 18 20:29 +0000] configure debug middleware                   
+[37mDEBU[0m[29 Oct 18 20:29 +0000] configure logging middleware                 
+[37mDEBU[0m[29 Oct 18 20:29 +0000] setup logger middleware: panic               
+[37mDEBU[0m[29 Oct 18 20:29 +0000] configure no auth middleware                 
+[37mDEBU[0m[29 Oct 18 20:29 +0000] setup credentials                             [37mcredentials[0m=0x146b200
+[37mDEBU[0m[29 Oct 18 20:29 +0000] configure client middleware                  
+[37mDEBU[0m[29 Oct 18 20:29 +0000] setup API endpoint                            [37mendpoint[0m="https://api.netlify.com"
+[37mDEBU[0m[29 Oct 18 20:29 +0000] POST /api/v1/oauth/tickets?client_id=5edad8f69d47ae8923d0cf0b4ab95ba1415e67492b5af26ad97f4709160bb31b HTTP/1.1
+Host: api.netlify.com
+User-Agent: netlifyctl
+Content-Length: 0
+Accept: application/json
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ 
+[31mERRO[0m[29 Oct 18 20:29 +0000] command failed                                [31merror[0m="Post https://api.netlify.com/api/v1/oauth/tickets?client_id=5edad8f69d47ae8923d0cf0b4ab95ba1415e67492b5af26ad97f4709160bb31b: dial tcp: lookup api.netlify.com on [::1]:53: read udp [::1]:59562->[::1]:53: read: connection refused"
