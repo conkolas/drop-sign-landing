@@ -1,9 +1,11 @@
 {
   "name": "drop-sign-landing",
   "version": "0.1.0",
+  "homepage": "https://github.com/conkolas/drop-sign-landing",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.3.2",
+    "contentful": "^7.0.5",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-intl": "^2.7.2",
