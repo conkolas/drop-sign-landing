@@ -5,6 +5,7 @@ const themes = {
       mainForeground: '#481BFF',
       
       primary: '#4D20FF',
+      primaryLight: '#4A5CFD',
       secondary: '#12E8A8',
   
       lightText: '#FFFFFF',
@@ -12,6 +13,18 @@ const themes = {
   
       menuActive: '#9EAEFF',
       signupBackground: '#D6DAFF',
+    },
+
+    content: {
+      spacing: 16,
+      upperPadding: {
+        large: 130,
+        medium: 60,
+      },
+      container: {
+        large: 1080,
+        medium: 740
+      }
     },
 
     header: {
