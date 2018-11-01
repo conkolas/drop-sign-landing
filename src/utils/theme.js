@@ -13,6 +13,9 @@ const themes = {
   
       menuActive: '#9EAEFF',
       signupBackground: '#D6DAFF',
+
+      contactInputBorder: '#C1CBFF',
+      contactInputBackground: '#4B4AFE',
     },
 
     content: {

@@ -31,6 +31,7 @@ const HowItWorksContainerStyle = styled.div`
   }
 
   .instruction-block {
+    position: relative;
     border-radius: 5px;
     background: ${props => props.theme.color.primaryLight};
     padding: 20px 20px 20px 40px;

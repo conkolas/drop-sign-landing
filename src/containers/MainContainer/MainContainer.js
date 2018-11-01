@@ -4,6 +4,8 @@ import TextBlock from './../../components/TextBlock/TextBlock';
 import ActionIcon from './../../components/ActionIcon/ActionIcon';
 import SignLandingIcon from './../../assets/icons/signMain.svg';
 import PageSection from './../../components/PageSection/PageSection';
+import MainShadow from './../../assets/main_shadow.svg';
+import MainSkyline from './../../assets/main_skyline.svg';
 import StyledMainContainer from './MainContainerStyle';
 
 const Content = {
@@ -13,8 +15,9 @@ const Content = {
 }
 
 const MainContainer = props => 
-  <StyledMainContainer>
-    <PageSection className="page-section" spacing={32}>
+  <StyledMainContainer backgroundShadow={MainShadow}>
+    <div className="background-shadow"></div>
+    <PageSection className="page-section" spacing={32} background={MainSkyline}>
       <Grid item xs={6}>
         <TextBlock alignRight
           className="text"

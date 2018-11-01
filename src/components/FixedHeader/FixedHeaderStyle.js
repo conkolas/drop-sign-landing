@@ -6,6 +6,7 @@ export const Gap = styled.div`
 
 export default styled.div`
   position: fixed;
+  z-index: 10;
   width: 100%;
   top: 0; left: 0;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.08);

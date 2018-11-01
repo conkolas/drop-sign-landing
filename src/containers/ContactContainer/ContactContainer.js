@@ -1,4 +1,8 @@
 import React from 'react';
+import {Grid} from '@material-ui/core';
+import SecondarySkyline from './../../assets/secondary_skyline.svg';
+import PageSection from '../../components/PageSection/PageSection';
+import ContactInput from '../../components/ContactInput/ContactInput';
 import StyledContactContainer from './ContactContainerStyle';
 
 const ContactContent = {
@@ -9,6 +13,18 @@ const ContactContent = {
 }
 
 const ContactContainer = props => 
-  <StyledContactContainer></StyledContactContainer>
+  <StyledContactContainer>
+    <PageSection secondary background={SecondarySkyline}>
+      <Grid container direction="column" justify="center" alignItems="center">
+        <Grid item xs={6} className="text-block">
+          <div className="title">{ContactContent.title}</div>
+          <div className="content">{ContactContent.content}</div>
+        </Grid>
+        <Grid item xs={12}>
+          <ContactInput placeholder={ContactContent.placeholder} submitText={ContactContent.submit}></ContactInput>
+        </Grid>
+      </Grid>
+    </PageSection>
+  </StyledContactContainer>
 
 export default ContactContainer;

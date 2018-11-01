@@ -1,9 +1,9 @@
 import React from 'react';
 import {Grid} from '@material-ui/core';
+import SecondarySkyline from './../../assets/secondary_skyline.svg';
 import ActionIcon, {ActionIconTypes} from './../../components/ActionIcon/ActionIcon';
 import TextBlock from './../../components/TextBlock/TextBlock';
 import PageSection from '../../components/PageSection/PageSection';
-import Row, { HalfRow } from '../../components/Row/Row';
 import StyledHowItWorksContainer from './HowItWorksContainerStyle';
 
 const TextBlockContent = {
@@ -61,7 +61,7 @@ const Instructions = [
 
 const HowItWorksContainer = props => 
   <StyledHowItWorksContainer>
-    <PageSection secondary>
+    <PageSection secondary background={SecondarySkyline}>
       <Grid container item xs={12}>
         <Grid item xs={6}>
           <TextBlock light
