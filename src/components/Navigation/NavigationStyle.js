@@ -10,12 +10,15 @@ const NavigationStyle = styled.nav`
     color: ${ props => props.theme.color.primary };
     margin: 0 20px;
     transition: color
-      ${ props => props.theme.transition.normal } 
-      ${ props => props.theme.transition.decelerate };
+    ${ props => props.theme.transition.normal } 
+    ${ props => props.theme.transition.decelerate };
     
-    &:hover:not(.primary):not(.secondary) {
+    &:hover:not(.primary):not(.secondary), &.active {
       color: ${ props => props.theme.color.menuActive };
     }
+    
+    color: ${ props => props.theme.color.primary };
+    text-decoration: none;
 
     &.primary, &.secondary {
       margin: 0 5px;

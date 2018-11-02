@@ -21,9 +21,15 @@ const MainContainerStyle = styled.div`
     left: 0; bottom: 0;
     width: 100%; height: 100%;
     z-index: 1;
-    background: url(${props => props.backgroundShadow}) center no-repeat;
-    background-size: cover;
- 
+
+    .background {
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      background: url(${props => props.backgroundShadow}) center bottom no-repeat;
+      background-size: cover;
+    }
   }
 `;
 

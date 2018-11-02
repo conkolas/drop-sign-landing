@@ -21,6 +21,15 @@ const ContactContainerStyle = styled.div`
     line-height: 29px;
     font-size: 18px;
   }
+
+  .submit-response {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    line-height: 60px;
+    color: ${props=>props.theme.color.secondary};
+  }
 `;
 
 export default ContactContainerStyle;

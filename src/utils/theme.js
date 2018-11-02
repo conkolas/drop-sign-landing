@@ -14,6 +14,7 @@ const themes = {
       menuActive: '#9EAEFF',
       signupBackground: '#D6DAFF',
 
+      contactError: '#FF9494',
       contactInputBorder: '#C1CBFF',
       contactInputBackground: '#4B4AFE',
     },
@@ -37,7 +38,7 @@ const themes = {
     footer: {
       height: 110
     },
-
+    
     transition: {
       normal: '0.3s',
       quick: '0.1s',

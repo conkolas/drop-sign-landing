@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const AboutContainerStyle = styled.div`
   .content-block {
     margin-bottom: 40px;
+    padding-right: 20px;
   }
 
   .icon {

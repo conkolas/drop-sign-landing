@@ -4,6 +4,12 @@ import FooterLogo from './../../assets/footerLogo.svg';
 import {PageContainer} from './../PageSection/PageSectionStyle';
 import StyledFooter from './FooterStyle';
 
+const FooterData = {
+  logoLink: 'https://taktikal.is/',
+  contact: '',
+  termsAndConditions: 'https://taktikal.is/'
+}
+
 class Footer extends Component {
   render() {
     return (
@@ -12,13 +18,13 @@ class Footer extends Component {
           <Grid container className="row" justify="center" direction="column">
             <Grid container item justify="space-between">
               <Grid item>
-                <a href="https://taktikal.is/">
+                <a href="https://taktikal.is/" target="_blank">
                   <img src={FooterLogo} alt="Footer-logo"></img>
                 </a>
               </Grid>
               <Grid item>
                 <div className="navigation">
-                  <a href="">Terms and conditions</a>
+                  <a href={FooterData.termsAndConditions} target="_blank">Terms and conditions</a>
                   <span>/</span>
                   <a href="">Contact</a>
                 </div>

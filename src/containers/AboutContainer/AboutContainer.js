@@ -53,7 +53,7 @@ const AboutContainer = props =>
       <Grid container item xs={6}>
         {
           AboutContentBlocks.map(contentBlock =>
-            <Grid container item xs={6} direction="column" className="content-block">
+            <Grid container item xs={6} direction="column" className="content-block" key={contentBlock.title}>
               <Grid container justify="center" alignItems="center" className="icon">
                 <img src={contentBlock.icon}/>
               </Grid>

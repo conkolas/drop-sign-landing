@@ -27,18 +27,32 @@ const ContactInputStyle = styled.div`
       letter-spacing: 0.1em;
     }
   }
+  
+  &.error {
+    input {
+      border-color: ${props=>props.theme.color.contactError};
+    }
+  }
 
   .submit-button {
     margin-left: 30px;
-    padding: 17px 35px;
+    padding: 18px 35px;
     background: ${ props => props.theme.color.lightText };
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
     text-align: center;
     letter-spacing: 0.1em;
     border-radius: 4px;
     color: #4D20FF;
     cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+      &:hover {
+        cursor: default;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+      }
+    }
   }
 
   .submit-button, input {
@@ -49,14 +63,10 @@ const ContactInputStyle = styled.div`
     transition: box-shadow 
       ${ props => props.theme.transition.normal },
       border-color ${ props => props.theme.transition.normal }
-      ${ props => props.theme.transition.decelerate };
+      ${ props => props.theme.transition.accelerate };
 
     &:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-      transition: box-shadow 
-        ${ props => props.theme.transition.quick },
-        border-color ${ props => props.theme.transition.normal }
-        ${ props => props.theme.transition.accelerate };
     }
     &:active {
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
@@ -64,6 +74,27 @@ const ContactInputStyle = styled.div`
   }
   input:focus {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
+  }
+
+  .input-wrap {
+    position: relative;
+    .success-icon {
+      position: absolute;
+      right: 20px; top: 50%;
+      transform: translateY(-50%) scale(0);
+      transition: transform
+        ${ props => props.theme.transition.normal }
+        ${ props => props.theme.transition.accelerate };
+    }
+
+    &.success {
+      .success-icon {
+        transform: translateY(-50%) scale(1);
+      }
+      input {
+        border-color: ${ props => props.theme.color.secondary };
+      }
+    }
   }
 `;
 

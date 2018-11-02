@@ -1,20 +1,44 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import StyledNavigation from './NavigationStyle';
 
 const Link = props => 
-  <div className={ (props.primary ? 'primary' : props.secondary ? 'secondary' : '') + ' link'} >
+  <a onClick={(e) => props.onClick(e)}
+    href={props.href} 
+    target={props.target}
+    className={ 
+      (props.primary ? ' primary ' : props.secondary ? ' secondary ' : '') + 
+      (props.active ? ' active ' : '') + ' link'
+    } >
     {props.children}
-  </div>
+  </a>
 
-const Navigation = props => 
+const Menu = props =>
   <StyledNavigation>
     <Grid container alignItems="center">
-      <Link>How it works</Link>
-      <Link>About</Link>
-      <Link primary={true}>Try it out</Link>
-      <Link secondary={true}>Sign in</Link>
+      { props.menuItems && props.menuItems.map(item => 
+        <Link 
+          active={item.active}
+          onClick={(e)=>props.onClick(e, item.order)} 
+          key={item.order} 
+          href={item.link} 
+          target={item.target} 
+          primary={item.primary} 
+          secondary={item.secondary}>
+          {item.title}
+        </Link>
+      )}
     </Grid>
   </StyledNavigation>
 
-export default Navigation;
+class Navigation extends React.Component {
+  render() {
+    const {menuItems, onMenuClick} = this.props; 
+    return (
+      <Menu menuItems={menuItems} onClick={(e, order) => onMenuClick(e, order)}></Menu>
+    )
+  }
+}
+
+export default withRouter(Navigation);

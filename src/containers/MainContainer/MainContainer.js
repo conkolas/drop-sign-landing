@@ -16,7 +16,9 @@ const Content = {
 
 const MainContainer = props => 
   <StyledMainContainer backgroundShadow={MainShadow}>
-    <div className="background-shadow"></div>
+    <div className="background-shadow">
+      <div className="background"></div>
+    </div>
     <PageSection className="page-section" spacing={32} background={MainSkyline}>
       <Grid item xs={6}>
         <TextBlock alignRight

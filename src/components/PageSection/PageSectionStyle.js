@@ -26,7 +26,7 @@ export default styled.section`
       props.theme.color.lightText : 
       props.theme.color.darkText};
 
-  .container {
+  .container, .container *:not(.background) {
     position: relative;
   }
   .background {

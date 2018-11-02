@@ -7,7 +7,7 @@ import FixedHeader from './../FixedHeader/FixedHeader';
 import StyledHeader from './HeaderStyle';
 
 const Header = (props) => (
-  <StyledHeader {...props} >
+  <StyledHeader >
     <PageContainer>
       <Grid container 
         direction="column"
@@ -17,8 +17,8 @@ const Header = (props) => (
             <Grid container item
               justify="space-between"
               alignItems="center">
-                  <Grid item><Logo className="logo"></Logo></Grid>
-                  <Grid item><Navigation></Navigation></Grid>
+                  <Grid item><Logo onClick={props.onHomeClick} className="logo"></Logo></Grid>
+                  <Grid item><Navigation menuItems={props.menuItems} onMenuClick={props.onMenuClick}></Navigation></Grid>
             </Grid>
       </Grid>
     </PageContainer>
